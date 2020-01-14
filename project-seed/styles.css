@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+}
+/* NAV */
+
+nav {
+    background: #222;
+    height: 100px;
+}
+
+.logo {
+    width: 200px;
+}
+
+/* HEADER */
+
+#header {
+    background-image: url(assets/images/header-space.png);
+    background-position: 50% 70%;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+main {
+    background: url("assets/images/stars-repeating-teal.jpg") repeat center;
+    background-size: 500px;
+    height: 800px;
+}
+
+h2.slogan {
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px #0094ff, 0 0 20px #0094ff, 0 0 20px #0094ff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+/* Planets */
+
+.planets-container {
+    text-align: center;
+}
+
+.planet {
+    display: inline-block;
+    padding: 20px;
+    background: rgba(0, 148, 255, 0.3);
+    margin: 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.planet-image-container {
+    height: 200px;
+    position: relative;
+}
+
+.planet-image {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.planet-name {
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    font-size: 30px;
+}
+
+/* Headquarters */
+
+.headquarters {
+    text-align: center;
+}
+
+.headquarters ul {
+    text-align: left;
+}
+
+.headquarters-info {
+    background: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    padding: 30px;
+    vertical-align: middle;
+}
+
+.headquarters-globe{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.headquarters-planet {
+    display: inline-block;
+    height: 600px;
+    width: 600px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.earth {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.headquarters-info > header > h3 {
+    margin: 0;
+    color: white;
+    font-size: 40px;
+}
+
+.moon-container {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: lunar-spin 5s linear infinite;
+}
+
+.moon {
+    height: 100%;
+}
+
+@keyframes lunar-spin {
+    0% {
+        z-index: 1;
+        transform: translate(-50%, 0%) scale(2);
+    }
+
+    24% {
+        z-index: 1;
+        transform: translate(-290%, -50%);
+    }
+
+    25% {
+        z-index: -1;
+        transform: translate(-296%, -50%);
+    }
+
+    50% {
+        z-index: -1;
+        transform: translate(-50%, -100%);
+    }
+
+    74% {
+        z-index: -1;
+        transform: translate(190%, -50%);
+    }
+
+    75% {
+        z-index: 1;
+        transform: translate(196%, -50%);
+    }
+
+    100% {
+        transform: translate(-50%, 0%) scale(2);
+    }
+}
