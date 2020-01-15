@@ -12,6 +12,8 @@ nav {
     width: 100%;
     top: 0;
     transition: background 300ms ease-in-out;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav.visible-nav {
@@ -19,9 +21,6 @@ nav.visible-nav {
 }
 
 .buttons-container {
-    position: absolute;
-    right: 0;
-    top: 0;
     margin: 20px;
 }
 
@@ -63,7 +62,9 @@ button:hover {
     background-position: 50% 70%;
     background-size: cover;
     height: 500px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
@@ -79,10 +80,6 @@ h2.slogan {
     font-family: 'Rajdhani', sans-serif;
     text-transform: uppercase;
     text-shadow: 0 0 20px #0094ff, 0 0 20px #0094ff, 0 0 20px #0094ff;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     white-space: nowrap;
 }
 
@@ -105,14 +102,13 @@ h2.slogan {
 
 .planet-image-container {
     height: 160px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .planet-image {
     height: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .planet-name {
@@ -136,7 +132,9 @@ h2.slogan {
 /* Headquarters */
 
 .headquarters {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .headquarters ul {
@@ -147,34 +145,25 @@ h2.slogan {
     background: rgba(0,0,0,0.4);
     border-radius: 10px;
     color: white;
-    display: inline-block;
     padding: 30px;
-    vertical-align: middle;
 }
 
 .headquarters-globe{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     z-index: 0;
 }
 
 .headquarters-planet {
-    display: inline-block;
+    display: flex;
     height: 600px;
     width: 600px;
-    vertical-align: middle;
-    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .earth {
-    position: absolute;
     height: 400px;
     width: 400px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     animation: earth-spin 30s linear infinite;
 }
 
@@ -200,11 +189,11 @@ h2.slogan {
 
 @keyframes earth-spin {
     0% {
-        transform: translate(-50%, -50%) rotate(0deg);
+        transform: rotate(0deg);
     }
 
     100% {
-        transform: translate(-50%, -50%) rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
