@@ -122,11 +122,7 @@ h2.slogan {
     border-radius: 10px;
     background: rgba(0,0,0,0.55);
     padding: 5px 10px;
-    max-width: 80px;
     box-sizing: content-box;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 /* Headquarters */
