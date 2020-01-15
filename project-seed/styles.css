@@ -24,15 +24,14 @@ nav {
 
 main {
     background: url("assets/images/stars-repeating-teal.jpg") repeat center;
-    background-size: 500px;
-    height: 800px;
+    background-size: 700px;
 }
 
 h2.slogan {
     color: white;
     margin: 0;
     text-align: center;
-    font-size: 70px;
+    font-size: 90px;
     font-family: 'Rajdhani', sans-serif;
     text-transform: uppercase;
     text-shadow: 0 0 20px #0094ff, 0 0 20px #0094ff, 0 0 20px #0094ff;
@@ -53,13 +52,14 @@ h2.slogan {
     display: inline-block;
     padding: 20px;
     background: rgba(0, 148, 255, 0.3);
-    margin: 20px;
+    margin: 20px 40px;
     border-radius: 10px;
-    width: 200px;
+    width: 160px;
+    border: 1px solid #0094ff;
 }
 
 .planet-image-container {
-    height: 200px;
+    height: 160px;
     position: relative;
 }
 
@@ -121,7 +121,6 @@ h2.slogan {
     transform: translate(-50%, -50%);
 }
 
-
 .headquarters-info > header > h3 {
     margin: 0;
     color: white;
@@ -135,7 +134,7 @@ h2.slogan {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    animation: lunar-spin 5s linear infinite;
+    animation: lunar-spin 10s linear infinite;
 }
 
 .moon {
@@ -145,7 +144,7 @@ h2.slogan {
 @keyframes lunar-spin {
     0% {
         z-index: 1;
-        transform: translate(-50%, 0%) scale(2);
+        transform: translate(-50%, 0%) scale(1.5);
     }
 
     24% {
@@ -160,7 +159,7 @@ h2.slogan {
 
     50% {
         z-index: -1;
-        transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%) scale(0.5);
     }
 
     74% {
@@ -174,6 +173,6 @@ h2.slogan {
     }
 
     100% {
-        transform: translate(-50%, 0%) scale(2);
+        transform: translate(-50%, 0%) scale(1.5);
     }
 }
