@@ -4,8 +4,18 @@ body {
 /* NAV */
 
 nav {
-    background: #222;
+    background: transparent;
     height: 100px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    top: 0;
+    transition: background 300ms ease-in-out;
+}
+
+nav.visible-nav {
+    background: #000;
 }
 
 .logo {
@@ -53,9 +63,10 @@ h2.slogan {
     padding: 20px;
     background: rgba(0, 148, 255, 0.3);
     margin: 20px 40px;
-    border-radius: 10px;
+    border-radius: 50%;
     width: 160px;
     border: 1px solid #0094ff;
+    position: relative;
 }
 
 .planet-image-container {
@@ -75,6 +86,17 @@ h2.slogan {
     font-family: 'Rajdhani', sans-serif;
     color: white;
     font-size: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    border-radius: 10px;
+    background: rgba(0,0,0,0.55);
+    padding: 5px 10px;
+    max-width: 80px;
+    box-sizing: content-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Headquarters */
@@ -119,6 +141,7 @@ h2.slogan {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: earth-spin 30s linear infinite;
 }
 
 .headquarters-info > header > h3 {
@@ -139,6 +162,16 @@ h2.slogan {
 
 .moon {
     height: 100%;
+}
+
+@keyframes earth-spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 @keyframes lunar-spin {
